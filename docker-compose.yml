@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  memgraph:
+    image: memgraph/memgraph:latest
+    container_name: wexa_memgraph
+    ports:
+      - "7687:7687"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+    command: ["--log-level=WARNING"]
+
+  falkordb:
+    image: falkordb/falkordb:latest
+    container_name: wexa_falkordb
+    ports:
+      - "6379:6379"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M

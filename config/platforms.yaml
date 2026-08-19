@@ -1,0 +1,57 @@
+platforms:
+  cognodb:
+    name: "CognoDB Cloud (Free)"
+    type: "bolt"
+    env_prefix: "COGNODB"
+    specs:
+      vCPU: "0.5 (Burstable)"
+      RAM: "256 MB"
+      Disk: "1 GB"
+      Host: "Managed Cloud"
+
+  neo4j:
+    name: "Neo4j AuraDB (Free)"
+    type: "bolt"
+    env_prefix: "NEO4J"
+    specs:
+      vCPU: "Unknown (Free Tier)"
+      RAM: "Unknown (Free Tier)"
+      Disk: "Unknown (Free Tier)"
+      Host: "Managed Cloud"
+
+  memgraph:
+    name: "Memgraph (Self-Hosted Capped)"
+    type: "bolt"
+    env_prefix: "MEMGRAPH"
+    specs:
+      vCPU: "0.5"
+      RAM: "256 MB"
+      Disk: "1 GB"
+      Host: "Local Docker"
+
+  falkordb:
+    name: "FalkorDB (Self-Hosted Capped)"
+    type: "bolt"
+    env_prefix: "FALKORDB"
+    specs:
+      vCPU: "0.5"
+      RAM: "256 MB"
+      Disk: "1 GB"
+      Host: "Local Docker"
+
+  arangodb:
+    name: "ArangoDB Oasis (Trial)"
+    type: "arango"
+    env_prefix: "ARANGODB"
+    specs:
+      vCPU: "Unknown (Trial)"
+      RAM: "Unknown (Trial)"
+      Disk: "Unknown (Trial)"
+      Host: "Managed Cloud"
+
+benchmark:
+  dataset: "soc-pokec-sample"
+  num_relationships_target: 100000
+  warmup_iterations: 10
+  read_iterations: 100
+  concurrency_sweep: [1, 10, 40]
