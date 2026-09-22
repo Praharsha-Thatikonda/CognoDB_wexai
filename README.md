@@ -31,8 +31,3 @@ This repository contains an automated, reproducible benchmark suite comparing **
 
 ![Throughput](report/charts/throughput.png)
 
-## Reproducibility
-
-1. `cp .env.example .env` and add your credentials.
-2. `make all`
-
